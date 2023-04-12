@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона - страница для отзывов</title>
+    <title>HTML Academy: Седона - страница для отзыва</title>
   </head>
   <body class="mane-body">
     <header class="main-header">
@@ -40,71 +40,109 @@
       </nav>
     </header>
     <main class="main-container">
-      <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+      <h1 class="visually-hidden">Страница для отзыва о Седоне.</h1>
       <section class="intro">
-        <div class="intro__wrapper">
-          <img src="img/slogan-intro.svg" width="282" height="214" alt="">
-          <h2 class="intro__title title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p class="intro__text text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <div class="intro__wrapper intro__wrapper--secondary">
+          <img src="img/sedona-text.svg" width="229" height="39" alt="">
+          <h2 class="intro__title title">Оставьте свой отзыв</h2>
+          <p class="intro__text text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
       </section>
-      <section class="advantages">
-        <div class="advantages__wrapper">
-          <h2 class="visually-hidden">Преимущества Cедоны</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <div class="advantages-real-city__wrapper">
-                <h3 class="advantages__title title">Настоящий городок</h3>
-                <p class="advantages__number text">— №1 —</p>
-                <p class="advantages__description text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-              </div>
-              <img src="img/real-city-mobile.png" width="320" height="260" alt="">
-              <ul class="advantages-real-life__list">
-                <li class="advantages-real-city__item advantages-real-city__item--accommodation">
-                  <h4 class="advantages-real-city__title title">Жилье</h4>
-                  <p class="advantages-real-city__text text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      <section class="review">
+        <div class="review__wrapper">
+          <h2 class="visually-hidden">Заполните форму отзыва о Седоне</h2>representation
+          <form class="review__form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="review__representation">
+              <h3 class="review__title title">Представьтесь:</h3>
+              <label class="review__label text">
+                Имя*:
+                <input class="review__input" type="text" value="Пётр" name="name">
+              </label>
+              <label class="review__label text">
+                Фамилия*:
+                <input class="review__input" type="text" value="Пустота" name="surname">
+              </label>
+              <label class="review__label text">
+                Отчество*:
+                <input class="review__input" type="text" value="Викторович" name="patronymic">
+              </label>
+            </div>
+            <div class="review__contacts">
+              <h3 class="review__title title">Контактная информация:</h3>
+              <label class="review__label text">
+                Контактный телефон*:
+                <input class="review__input review__input--phone" type="text" placeholder="Введите телефон" name="phone">
+              </label>
+              <label class="review__label text">
+                Электронная почта*:
+                <input class="review__input review__input--email" type="text" placeholder="Введите e-mail" name="email">
+              </label>
+            </div>
+            <fieldset class="review__filter-group">
+              <legend class="review__fieldset-title title">Ваше общее впечатление:</legend>
+              <ul class="review__list review__list--impression">
+                <li class="review__item">
+                  <label class="review__control">
+                    <input class="visually-hidden review__control-input" type="radio" name="impression" value="positive" checked>
+                    <span class="review__control-mark"></span>
+                    <span class="review__control-text">Скорее положительное</span>
+                  </label>
                 </li>
-                <li class="advantages-real-city__item advantages-real-city__item--food">
-                  <h4 class="advantages-real-city__title title">Еда</h4>
-                  <p class="advantages-real-city__text text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <li class="review__item">
+                  <label class="review__control">
+                    <input class="visually-hidden review__control-input" type="radio" name="impression" value="negative" checked>
+                    <span class="review__control-mark"></span>
+                    <span class="review__control-text">Скорее отрицательное</span>
+                  </label>
                 </li>
-                <li class="advantages-real-city__item advantages-real-city__item--souvenir">
-                  <h4 class="advantages-real-city__title title">Сувениры</h4>
-                  <p class="advantages-real-city__text text">Не только китайского, но и местного производства!</p>
+                <li class="review__item">
+                  <label class="review__control">
+                    <input class="visually-hidden review__control-input" type="radio" name="impression" value="no answer" checked>
+                    <span class="review__control-mark"></span>
+                    <span class="review__control-text">Затрудняюсь ответить</span>
+                  </label>
                 </li>
               </ul>
-            </li>
-            <li class="advantages__item">
-              <div class="advantages-devil-bridge__wrapper">
-                <h3 class="advantages__title title">Там есть мост дьявола</h3>
-                <p class="advantages__number text">— №2 —</p>
-                <p class="advantages__description text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-              </div>
-              <img src="img/devil-bridge-mobile.png" width="320" height="260" alt="">
-            </li>
-            <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title title">Небольшая площадь</h3>
-              <p class="advantages__number text ">— №3 —</p>
-              <p class="advantages__description text">Все интересные места находятся очень близко</p>
-            </li>
-            <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title title">Красивая дорога</h3>
-              <p class="advantages__number text ">— №4 —</p>
-              <p class="advantages__description text">Ехать в седону из лас-вегаса совсем не скучно!</p>
-            </li>
-            <li class="advantages__item advantages__item--secondary">
-              <h3 class="advantages__title title">Мало туристов</h3>
-              <p class="advantages__number text ">— №5 —</p>
-              <p class="advantages__description text">Большинство едет в гранд каньон и толпится там</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="searching">
-        <div class="searching__wrapper">
-          <h2 class="searching__title title title--searching">Заинтересовались?</h2>
-          <p class="searching__text text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц Седоны</p>
-          <a class="searching__link button" href="#">Найти гостиницу</a>
+            </fieldset>
+            <fieldset class="review__filter-group">
+              <legend class="review__fieldset-title title">Посещенные достопримечательности:</legend>
+              <ul class="review__list review__list--attraction">
+                <li class="review__item">
+                  <label class="review__control">
+                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Bridge" checked>
+                    <span class="review__control-mark"></span>
+                    <span class="review__control-text">Мост Дьявола</span>
+                  </label>
+                </li>
+                <li class="review__item">
+                  <label class="review__control">
+                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Mountain" checked>
+                    <span class="review__control-mark"></span>
+                    <span class="review__control-text">Гора-Колокол</span>
+                  </label>
+                </li>
+                <li class="review__item">
+                  <label class="review__control">
+                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Slide park" checked>
+                    <span class="review__control-mark"></span>
+                    <span class="review__control-text">Слайд-парк</span>
+                  </label>
+                </li>
+                <li class="review__item">
+                  <label class="review__control">
+                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Red rocks">
+                    <span class="review__control-mark"></span>
+                    <span class="review__control-text">Красные скалы</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <label class="review__label title">
+              <textarea class="review__comment" id="review-text" name="review-text" rows="4" minlength="3" placeholder="Опишите подробно все свои восторги " required></textarea>
+            </label>
+            <button class="review__submit-button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+            <span class="review__footnote">* — обязательные поля</span>
+          </form>
         </div>
       </section>
     </main>
