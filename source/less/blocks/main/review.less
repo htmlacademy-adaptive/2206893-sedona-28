@@ -1,0 +1,60 @@
+.review {
+  padding: 36px @secondary-side-indent 22px @secondary-side-indent;
+}
+
+.review__header {
+  padding: 0 0 28px 0;
+
+  &-title {
+    margin-bottom: 24px;
+  }
+}
+
+.review__title {
+  margin-bottom: 20px;
+}
+
+.review__form {
+  .flex-style(column, initial, initial, initial);
+}
+
+.review__list {
+  .list-reset();
+  display: grid;
+  gap: 16px;
+}
+
+.review__label {
+  .flex-style(column, initial, initial, initial);
+
+  &-text {
+    padding-left: 16px;
+  }
+}
+
+.review__input {
+  padding: 16px;
+  background-color: @input-color;
+  border: none;
+
+  &--comment {
+    resize: none;
+  }
+}
+
+.review__input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.review__submit-button {
+  margin-bottom: 3px;
+}
+
+.review__footnote {
+  align-self: end;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.6);
+}
