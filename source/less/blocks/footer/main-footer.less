@@ -1,14 +1,11 @@
 .main-footer {
-  display: grid;
-  gap: 30px;
+  .grid-style(30, initial);
   padding: 41px @main-side-indent 33px @main-side-indent;
 }
 
 .social__list {
-  .list-reset;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  .list-reset();
+  .flex-style(initial, wrap, 6px, initial);
 }
 
 .social__link {

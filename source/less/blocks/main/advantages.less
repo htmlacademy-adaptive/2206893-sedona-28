@@ -9,7 +9,7 @@
 }
 
 .advantages__list {
-  .list-reset;
+  .list-reset();
 }
 
 .advantages__item {
@@ -35,7 +35,7 @@
 }
 
 .advantages-real-life__list {
-  .list-reset;
+  .list-reset();
   padding: 23px @main-side-indent 46px @main-side-indent;
   background-color: @base-color;
   color: @base-text-color;
@@ -66,19 +66,19 @@
   .advantages__text {
     color: @secondary-text-color;
   }
-}
 
-.advantages__item--secondary:last-child {
-  padding-bottom: 28px;
-}
+  &:last-child {
+    padding-bottom: 28px;
+  }
 
-.advantages__item--secondary:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: @main-side-indent;
-  width: calc(100% - (2 * @main-side-indent));
-  height: 1px;
-  background-color: #d6d6d6;
-  z-index: 1;
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: @main-side-indent;
+    width: calc(100% - (2 * @main-side-indent));
+    height: 1px;
+    background-color: #d6d6d6;
+    z-index: 1;
+  }
 }

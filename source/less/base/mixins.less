@@ -1,0 +1,26 @@
+.list-reset() {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  list-style: none;
+}
+
+.indent-reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-style(@direction, @wrap, @gap, @align) {
+  display: flex;
+  flex-direction: @direction;
+  flex-wrap: @wrap;
+  gap: @gap;
+  align-items: @align;
+}
+
+.grid-style(@gap, @align) {
+  display: grid;
+  gap: @gap;
+  align-items: @align;
+}

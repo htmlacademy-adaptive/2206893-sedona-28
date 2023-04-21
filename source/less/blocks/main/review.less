@@ -15,19 +15,17 @@
 }
 
 .review__form {
-  display: flex;
-  flex-direction: column;
+  .flex-style(column, initial, initial, initial);
 }
 
 .review__list {
-  .list-reset;
+  .list-reset();
   display: grid;
   gap: 16px;
 }
 
 .review__label {
-  display: flex;
-  flex-direction: column;
+  .flex-style(column, initial, initial, initial);
 
   &-text {
     padding-left: 16px;
