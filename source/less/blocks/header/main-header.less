@@ -1,13 +1,21 @@
 .main-header {
   position: relative;
   min-height: 56px;
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 185px;
+    height: 96px;
+    transform: translateX(-50%);
+  }
 }
 
-.main-header__logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 185px;
-  height: 96px;
-  transform: translateX(-50%);
+@media (min-width: @tablet-width) {
+  .main-header {
+    &__logo {
+      z-index: 1;
+    }
+  }
 }

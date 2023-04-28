@@ -2,14 +2,38 @@
 // }
 
 .main-container__header {
-  line-height: 0;
+  position: relative;
   padding: 90px 19px 85px 19px;
-  background-image: url("../../img/intro-background-mobile.png");
+  background-image: url("../../img/intro-back-mobile@1x.png");
   background-repeat: no-repeat;
   background-color: @secondary-color;
+  background-position: top center;
+  text-align: center;
+  line-height: 0;
 
   &--secondary {
     padding: 52px 45px 67px 45px;
     background-image: url("../../img/intro-background-mobile-secondary.png");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 57px;
+    background-image: url("../../img/intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @desktop-width) {
+      background-size: calc(100% + 1px);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 153px 91px 154px;
+    background-image: url("../../img/intro-back-desktop@1x.png");
   }
 }
