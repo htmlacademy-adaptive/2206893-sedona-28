@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - страница для отзыва</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="main-body">
     <header class="main-header container">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
       <nav class="main-nav">
@@ -16,24 +17,16 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">
-              Главная
-            </a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">
-              Фото и видео
-            </a>
-          </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link" href="#">
-              Форма Отзыва
-            </a>
+            <a class="main-nav__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
-              HTML ACADEMY
-            </a>
+            <a class="main-nav__link main-nav__link--active" href="#">Форма Отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
           </li>
         </ul>
       </nav>
@@ -46,116 +39,112 @@
       <section class="review">
         <header class="review__header">
           <h2 class="review__header-title title">Оставьте свой отзыв</h2>
-          <p class="review__header-text text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="review__header-text text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
         </header>
         <form class="review__form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="review-section review-section--representation">
-            <h3 class="review__title title">Представьтесь:</h3>
-            <ul class="review__list">
-              <li class="review__item">
-                <label class="review__label">
-                  <span class="review__label-text text">Имя*:</span>
-                  <input class="review__input review-text" type="text" value="Пётр" name="name">
+            <h3 class="review-section__title title">Представьтесь:</h3>
+            <ul class="review-section__list">
+              <li class="review-section__item">
+                <label class="review-section__label">
+                  <span class="review-section__label-text text">Имя*:</span>
+                  <input class="review-section__input review-text" type="text" value="Пётр" name="name">
                 </label>
               </li>
-              <li class="review__item">
-                <label class="review__label">
-                  <span class="review__label-text text">Фамилия*:</span>
-                  <input class="review__input review-text" type="text" value="Пустота" name="surname">
+              <li class="review-section__item">
+                <label class="review-section__label">
+                  <span class="review-section__label-text text">Фамилия*:</span>
+                  <input class="review-section__input review-text" type="text" value="Пустота" name="surname">
                 </label>
               </li>
-              <li class="review__item">
-                <label class="review__label">
-                  <span class="review__label-text text">Отчество*:</span>
-                  <input class="review__input review-text" type="text" value="Викторович" name="patronymic">
+              <li class="review-section__item">
+                <label class="review-section__label">
+                  <span class="review-section__label-text text">Отчество*:</span>
+                  <input class="review-section__input review-text" type="text" value="Викторович" name="patronymic">
                 </label>
               </li>
             </ul>
           </div>
           <div class="review-section review-section--contacts">
-            <h3 class="review__title title">Контактная информация:</h3>
-            <ul class="review__list">
-              <li class="review__item">
-                <label class="review__label">
-                  <span class="review__label-text text">Контактный телефон*:</span>
-                  <input class="review__input review__input--phone review-text" type="tel" placeholder="Введите телефон" name="phone">
+            <h3 class="review-section__title title">Контактная информация:</h3>
+            <ul class="review-section__list">
+              <li class="review-section__item">
+                <label class="review-section__label">
+                  <span class="review-section__label-text text">Контактный телефон*:</span>
+                  <input class="review-section__input review-section__input--phone review-text" type="tel" placeholder="Введите телефон" name="phone">
                 </label>
               </li>
-              <li class="review__item">
-                <label class="review__label">
-                  <span class="review__label-text text">Электронная почта*:</span>
-                  <input class="review__input review__input--email review-text" type="email" pattern="" placeholder="Введите e-mail" name="email">
+              <li class="review-section__item">
+                <label class="review-section__label">
+                  <span class="review-section__label-text text">Электронная почта*:</span>
+                  <input class="review-section__input review-section__input--email review-text" type="email" pattern="" placeholder="Введите e-mail" name="email">
                 </label>
               </li>
             </ul>
           </div>
-          <div class="review-section">
-            <fieldset class="review-section--filter-group">
-              <legend class="review__title title">Ваше общее впечатление:</legend>
-              <ul class="review__list review__list--impression">
-                <li class="review__item">
-                  <label class="review__control">
-                    <input class="visually-hidden review__control-input" type="radio" name="impression" value="positive" checked>
-                    <span class="review__control-mark"></span>
-                    <span class="review__control-text review-text">Скорее положительное</span>
-                  </label>
-                </li>
-                <li class="review__item">
-                  <label class="review__control">
-                    <input class="visually-hidden review__control-input" type="radio" name="impression" value="negative" checked>
-                    <span class="review__control-mark"></span>
-                    <span class="review__control-text review-text">Скорее отрицательное</span>
-                  </label>
-                </li>
-                <li class="review__item">
-                  <label class="review__control">
-                    <input class="visually-hidden review__control-input" type="radio" name="impression" value="no answer" checked>
-                    <span class="review__control-mark"></span>
-                    <span class="review__control-text review-text">Затрудняюсь ответить</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="review-section">
-            <fieldset class="review-section--filter-group">
-              <legend class="review__title title">Посещенные достопримечательности:</legend>
-              <ul class="review__list review__list--attraction">
-                <li class="review__item">
-                  <label class="review__control">
-                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Bridge" checked>
-                    <span class="review__control-mark"></span>
-                    <span class="review__control-text review-text">Мост Дьявола</span>
-                  </label>
-                </li>
-                <li class="review__item">
-                  <label class="review__control">
-                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Mountain" checked>
-                    <span class="review__control-mark"></span>
-                    <span class="review__control-text review-text">Гора-Колокол</span>
-                  </label>
-                </li>
-                <li class="review__item">
-                  <label class="review__control">
-                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Slide park" checked>
-                    <span class="review__control-mark"></span>
-                    <span class="review__control-text review-text">Слайд-парк</span>
-                  </label>
-                </li>
-                <li class="review__item">
-                  <label class="review__control">
-                    <input class="visually-hidden review__control-input" type="checkbox" name="attraction" value="Red rocks">
-                    <span class="review__control-mark"></span>
-                    <span class="review__control-text review-text">Красные скалы</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+          <fieldset class="review-section review-section--filter-group">
+            <legend class="review-section__title title">Ваше общее впечатление:</legend>
+            <ul class="review-section__list review-section__list--impression">
+              <li class="review-section__item">
+                <label class="review-section___control">
+                  <input class="visually-hidden review-section___control-input" type="radio" name="impression" value="positive" checked>
+                  <span class="review-section___control-mark"></span>
+                  <span class="review-section___control-text review-text">Скорее положительное</span>
+                </label>
+              </li>
+              <li class="review-section__item">
+                <label class="review-section___control">
+                  <input class="visually-hidden review-section___control-input" type="radio" name="impression" value="negative" checked>
+                  <span class="review-section___control-mark"></span>
+                  <span class="review-section___control-text review-text">Скорее отрицательное</span>
+                </label>
+              </li>
+              <li class="review-section__item">
+                <label class="review-section___control">
+                  <input class="visually-hidden review-section___control-input" type="radio" name="impression" value="no answer" checked>
+                  <span class="review-section___control-mark"></span>
+                  <span class="review-section___control-text review-text">Затрудняюсь ответить</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-section review-section--filter-group">
+            <legend class="review-section__title title">Посещенные<br>достопримечательности:</legend>
+            <ul class="review-section__list review-section__list--attraction">
+              <li class="review-section__item">
+                <label class="review-section___control">
+                  <input class="visually-hidden review-section___control-input" type="checkbox" name="attraction" value="Bridge" checked>
+                  <span class="review-section___control-mark"></span>
+                  <span class="review-section___control-text review-text">Мост Дьявола</span>
+                </label>
+              </li>
+              <li class="review-section__item">
+                <label class="review-section___control">
+                  <input class="visually-hidden review-section___control-input" type="checkbox" name="attraction" value="Mountain" checked>
+                  <span class="review-section___control-mark"></span>
+                  <span class="review-section___control-text review-text">Гора-Колокол</span>
+                </label>
+              </li>
+              <li class="review-section__item">
+                <label class="review-section___control">
+                  <input class="visually-hidden review-section___control-input" type="checkbox" name="attraction" value="Slide park" checked>
+                  <span class="review-section___control-mark"></span>
+                  <span class="review-section___control-text review-text">Слайд-парк</span>
+                </label>
+              </li>
+              <li class="review-section__item">
+                <label class="review-section___control">
+                  <input class="visually-hidden review-section___control-input" type="checkbox" name="attraction" value="Red rocks">
+                  <span class="review-section___control-mark"></span>
+                  <span class="review-section___control-text review-text">Красные скалы</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
           <div class="review-section review-section--comment">
-            <label class="review__label">
-              <span class="review__title title">Опишите свои эмоции:</span>
-              <textarea class="review__input review__input--comment review-text" id="review-text" name="review-text" rows="4" minlength="3" placeholder="Опишите подробно все свои восторги " required></textarea>
+            <label class="review-section__label">
+              <span class="review-section__title title">Опишите свои эмоции:</span>
+              <textarea class="review-section__input review-section__input--comment review-text" id="review-text" name="review-text" rows="4" minlength="3" placeholder="Опишите подробно все свои восторги " required></textarea>
             </label>
           </div>
           <button class="review__submit-button button" type="submit">Отправить отзыв</button>
@@ -182,7 +171,7 @@
           </a>
         </li>
       </ul>
-      <div class="main-footer__copyright copyright">
+      <div class="main-footer__copyright">
         <span class="copyright__text text">Разработано</span>
         <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__icon" width="29" height="35" viewBox="0 0 29 35" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"/></svg>

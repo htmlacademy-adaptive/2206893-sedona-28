@@ -1,17 +1,39 @@
 .searching {
   .indent-reset();
+  .flex-style(column, initial, initial, center);
 
   &__text-wrapper {
     padding: 38px @main-side-indent 49px @main-side-indent;
+    .flex-style(column, initial, initial, center);
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      padding: 60px 150px 55px 150px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 60px 350px 66px 350px;
+    }
   }
 
   &__title {
     margin-bottom: 18px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 26px;
+    }
   }
 
   &__text {
     margin-bottom: 32px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 44px;
+    }
   }
 
-  // &__link {}
+  &__link {
+    width: 100%;
+    max-width: 458px;
+  }
 }
