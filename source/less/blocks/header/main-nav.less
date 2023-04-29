@@ -3,7 +3,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
   }
 
   &__list {
@@ -15,7 +14,10 @@
     width: 100%;
     text-align: center;
     background-color: @secondary-color;
-    z-index: 1
+
+    @media (max-width: @mobile-width) {
+      z-index: 2;
+    }
     // display: none;
   }
 
@@ -58,6 +60,7 @@
     }
 
     &__list {
+      position: relative;
       flex-direction: row;
       align-items: center;
       background-color: @base-color;

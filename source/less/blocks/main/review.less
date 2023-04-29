@@ -1,60 +1,72 @@
 .review {
   padding: 36px @secondary-side-indent 22px @secondary-side-indent;
-}
 
-.review__header {
-  padding: 0 0 28px 0;
+  @media (min-width: @tablet-width) {
+    padding: 64px 60px;
+  }
 
-  &-title {
-    margin-bottom: 24px;
+  @media (min-width: @desktop-width) {
+    padding: 115px 120px 70px 120px;
+  }
+
+  &__header {
+    .flex-style(column, initial, 24px, center);
+    margin: 0 0 28px 0;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      gap: 20px;
+      margin-bottom: 108px;
+
+      &-text {
+        padding: 0 105px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      gap: 31px;
+      margin-bottom: 68px;
+
+      &-text {
+        padding: 0 260px;
+      }
+    }
+  }
+
+  &__form {
+    .grid-style(initial, initial);
+
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: @mobile-width) {
+    &__submit-button {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__submit-button {
+    @media (min-width: @desktop-width) {
+      margin-left: 96px;
+    }
+  }
+
+  &__footnote {
+    text-align: right;
+    font-size: 12px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: rgba(51, 51, 51, 0.6);
+
+    @media (min-width: @tablet-width) {
+      padding: 23px 0 14px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 96px;
+    }
   }
 }
 
-.review__title {
-  margin-bottom: 20px;
-}
-
-.review__form {
-  .flex-style(column, initial, initial, initial);
-}
-
-.review__list {
-  .list-reset();
-  display: grid;
-  gap: 16px;
-}
-
-.review__label {
-  .flex-style(column, initial, initial, initial);
-
-  &-text {
-    padding-left: 16px;
-  }
-}
-
-.review__input {
-  padding: 16px;
-  background-color: @input-color;
-  border: none;
-
-  &--comment {
-    resize: none;
-  }
-}
-
-.review__input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-  opacity: 1;
-}
-
-.review__submit-button {
-  margin-bottom: 3px;
-}
-
-.review__footnote {
-  align-self: end;
-  font-size: 12px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: rgba(51, 51, 51, 0.6);
-}

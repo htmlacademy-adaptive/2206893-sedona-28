@@ -7,13 +7,20 @@
   background-image: url("../../img/intro-back-mobile@1x.png");
   background-repeat: no-repeat;
   background-color: @secondary-color;
-  background-position: top center;
+  background-position: center top;
   text-align: center;
   line-height: 0;
 
   &--secondary {
     padding: 52px 45px 67px 45px;
     background-image: url("../../img/intro-background-mobile-secondary.png");
+    background-position: center -56px;
+
+    @media (min-width: @tablet-width) {
+      padding: 95px 155px 117px 155px;
+      background-image: url("../../img/intro-back-desktop@1x.png");
+      background-position: center -217px;
+    }
   }
 
   &::before {
