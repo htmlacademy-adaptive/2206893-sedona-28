@@ -51,7 +51,7 @@
         position: absolute;
         top: 100%;
         left: @main-side-indent;
-        width: calc(100% - (2 * @main-side-indent));
+        width: calc(100% - 2 * @main-side-indent);
         height: 1px;
         background-color: #d6d6d6;
         z-index: 1;
@@ -207,7 +207,7 @@
       padding: 0 20px;
     }
 
-    @media (max-width: calc(@desktop-width - 1px)) {
+    @media (max-width: (@desktop-width - 1px)) {
       br {
         display: none;
       }

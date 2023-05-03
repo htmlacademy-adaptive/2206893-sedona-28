@@ -7,9 +7,7 @@ const initOpenMenu = () => {
 
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--hidden')) {
-      navMain.classList.remove('main-nav--hidden');
-    } else {
-      navMain.classList.add('main-nav--hidden');
+      navMain.classList.toggle('main-nav--hidden');
     }
   });
 };
