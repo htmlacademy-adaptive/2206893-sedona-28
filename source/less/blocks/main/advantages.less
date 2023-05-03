@@ -103,6 +103,12 @@
 
 .advantages__text {
   color: @base-color;
+
+  @media (max-width: @mobile-width) or (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .advantages__img {
@@ -111,17 +117,17 @@
   }
 }
 
-.advantages-real-life {
+.advantages__real-life {
   position: relative;
   padding: 70px @main-side-indent 40px @main-side-indent;
 
-  &__list {
+  &-list {
     .list-reset();
+    .grid-style(25px, initial);
     padding: 23px @main-side-indent 46px @main-side-indent;
     background-color: @base-color;
     text-align: left;
     color: @base-text-color;
-    .grid-style(25px, initial);
 
     @media (min-width: @tablet-width) {
       grid-column: span 3;
@@ -132,15 +138,63 @@
     }
   }
 
-  &__item {
+  &-item {
     padding: 8px 0 0 47px;
+    background-position: left top;
+    background-repeat: no-repeat;
 
     @media (min-width: @tablet-width) {
       padding: 158px @tablet-side-indent 60px @tablet-side-indent;
     }
+
+    @media (min-width: @desktop-width) {
+      padding: 170px @tablet-side-indent 69px @tablet-side-indent;
+    }
+
+    &--accommodation {
+      background-image: url("../../img/accommodation-icon.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/accommodation-icon-tablet.svg");
+        background-position: center 60px;
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../../img/accommodation-icon-desktop.svg");
+        background-position: center 69px;
+      }
+    }
+
+    &--food {
+      background-image: url("../../img/food-icon.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/food-icon-tablet.svg");
+        background-position: center 62px;
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../../img/food-icon-desktop.svg");
+        background-position: center 72px;
+      }
+    }
+
+    &--souvenir {
+      background-image: url("../../img/souvenir-icon.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/souvenir-icon-tablet.svg");
+        background-position: center 64px;
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../../img/souvenir-icon-desktop.svg");
+        background-position: center 69px;
+      }
+    }
   }
 
-  &__title {
+  &-title {
     margin-bottom: 16px;
 
     @media (min-width: @tablet-width) {
@@ -148,9 +202,15 @@
     }
   }
 
-  &__text {
+  &-text {
     @media (min-width: @desktop-width) {
-      padding: 0 15px;
+      padding: 0 20px;
+    }
+
+    @media (max-width: calc(@desktop-width - 1px)) {
+      br {
+        display: none;
+      }
     }
   }
 
@@ -174,6 +234,12 @@
 
   @media (min-width: @tablet-width) {
     grid-column: 3 / span 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages__text {
+      padding: 0 25px;
+    }
   }
 }
 

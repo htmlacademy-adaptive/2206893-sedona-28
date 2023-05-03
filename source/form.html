@@ -11,10 +11,9 @@
       <a class="main-header__logo" href="index.html">
         <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <!-- Класс main-nav--nojs стоит при отключенном js -->
+      <!-- Класс main-nav--hidden используется для скрытия навигации при активном js -->
+      <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -23,12 +22,15 @@
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="#">Форма Отзыва</a>
+            <a class="main-nav__link main-nav__link--active active-link" href="#">Форма Отзыва</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
           </li>
         </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </nav>
     </header>
     <main class="main-container container">
@@ -72,12 +74,14 @@
                 <label class="review-section__label">
                   <span class="review-section__label-text text">Контактный телефон*:</span>
                   <input class="review-section__input review-section__input--phone review-text" type="tel" placeholder="Введите телефон" name="phone">
+                  <span class="review-section__phone-icon"></span>
                 </label>
               </li>
               <li class="review-section__item">
                 <label class="review-section__label">
                   <span class="review-section__label-text text">Электронная почта*:</span>
                   <input class="review-section__input review-section__input--email review-text" type="email" pattern="" placeholder="Введите e-mail" name="email">
+                  <span class="review-section__email-icon"></span>
                 </label>
               </li>
             </ul>
@@ -94,14 +98,14 @@
               </li>
               <li class="review-section__item">
                 <label class="review-section___control">
-                  <input class="visually-hidden review-section___control-input" type="radio" name="impression" value="negative" checked>
+                  <input class="visually-hidden review-section___control-input" type="radio" name="impression" value="negative">
                   <span class="review-section___control-mark"></span>
                   <span class="review-section___control-text review-text">Скорее отрицательное</span>
                 </label>
               </li>
               <li class="review-section__item">
                 <label class="review-section___control">
-                  <input class="visually-hidden review-section___control-input" type="radio" name="impression" value="no answer" checked>
+                  <input class="visually-hidden review-section___control-input" type="radio" name="impression" value="no answer">
                   <span class="review-section___control-mark"></span>
                   <span class="review-section___control-text review-text">Затрудняюсь ответить</span>
                 </label>
@@ -144,7 +148,7 @@
           <div class="review-section review-section--comment">
             <label class="review-section__label">
               <span class="review-section__title title">Опишите свои эмоции:</span>
-              <textarea class="review-section__input review-section__input--comment review-text" id="review-text" name="review-text" rows="4" minlength="3" placeholder="Опишите подробно все свои восторги " required></textarea>
+              <textarea class="review-section__input review-section__input--comment review-text" id="review-text" name="review-text" minlength="5" placeholder="Опишите подробно все свои восторги " required></textarea>
             </label>
           </div>
           <button class="review__submit-button button" type="submit">Отправить отзыв</button>
@@ -179,9 +183,10 @@
         </a>
       </div>
     </footer>
+    <!-- Для проверки работымодального окна реализован js открытия по нажатию на кнопку отправки формы отзыва. По умолчанию вызывается из функция окна в случае успешной отправки отзыва initModalOk. Функция для окна ошибки и вызов функции закомментированы. Для проверки окна в случае ошибки в файле js необходимо раскомментировать функцию initModalError и ее вызов, при этом закомментировать функцию initModalOk и ее вызов. -->
     <div class="modal-container modal-container-error modal-container-error--close">
       <div class="modal-container__error">
-        <h2 class="modal-container__title title">Что-то пошло не так!</h2>
+        <h2 class="modal-container__title title">Что-то пошло не&nbsp;так!</h2>
         <p class="modal-container__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal-container__error-close-button button" type="button">Ок</button>
       </div>
@@ -190,12 +195,13 @@
       <div class="modal-container__review-send">
         <div class="modal-container__text-wrapper">
           <h2 class="modal-container__title title">Ваш отзыв отправлен!</h2>
-          <p class="modal-container__text text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          <p class="modal-container__text text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="modal-container__close-button-wrapper">
           <button class="modal-container__review-send-close-button button" type="button">Закрыть окно</button>
         </div>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

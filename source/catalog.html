@@ -11,10 +11,9 @@
       <a class="main-header__logo" href="index.html">
         <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <!-- Класс main-nav--nojs стоит при отключенном js -->
+      <!-- Класс main-nav--hidden используется для скрытия навигации при активном js -->
+      <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">
@@ -22,7 +21,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="#">
+            <a class="main-nav__link main-nav__link--active active-link" href="#">
               Фото и видео
             </a>
           </li>
@@ -37,6 +36,9 @@
             </a>
           </li>
         </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </nav>
     </header>
     <main class="main-container container">
@@ -58,8 +60,11 @@
               <h3 class="foto-catalog__title text">Неродные просторы</h3>
               <p class="foto-catalog__autor text">Автор фото: Борис</p>
               <div class="foto-catalog__like-wrapper">
-                <button class="foto-catalog__button">
+                <button class="foto-catalog__button" type="button">
                   <span class="visually-hidden">Поставить лайк</span>
+                  <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                  </svg>
                 </button>
                 <span class="foto-catalog__like-counter text">1350</span>
               </div>
@@ -73,8 +78,11 @@
               <h3 class="foto-catalog__title text">Местная растительность</h3>
               <p class="foto-catalog__autor text">Автор фото: Сергей</p>
               <div class="foto-catalog__like-wrapper">
-                <button class="foto-catalog__button">
+                <button class="foto-catalog__button" type="button">
                   <span class="visually-hidden">Поставить лайк</span>
+                  <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                  </svg>
                 </button>
                 <span class="foto-catalog__like-counter text">143</span>
               </div>
@@ -88,8 +96,11 @@
               <h3 class="foto-catalog__title text">Дорога на север</h3>
               <p class="foto-catalog__autor text">Автор фото: Петр</p>
               <div class="foto-catalog__like-wrapper">
-                <button class="foto-catalog__button">
+                <button class="foto-catalog__button" type="button">
                   <span class="visually-hidden">Поставить лайк</span>
+                  <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                  </svg>
                 </button>
                 <span class="foto-catalog__like-counter text">96</span>
               </div>
@@ -103,8 +114,11 @@
               <h3 class="foto-catalog__title text">Мост дьявола</h3>
               <p class="foto-catalog__autor text">Автор фото: Антон</p>
               <div class="foto-catalog__like-wrapper">
-                <button class="foto-catalog__button">
+                <button class="foto-catalog__button" type="button">
                   <span class="visually-hidden">Поставить лайк</span>
+                  <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                  </svg>
                 </button>
                 <span class="foto-catalog__like-counter text">254</span>
               </div>
@@ -118,6 +132,9 @@
         <a class="video__link" target="_blank" href="#">
           <button class="video__play-button" type="button">
             <span class="visually-hidden">Посмотреть видео</span>
+            <svg width="48" height="54" viewBox="0 0 48 54" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 27L0 54L2.42273e-06 0L48 27Z"/>
+            </svg>
           </button>
           <img src="img/video-mobile.png" width="280" height="177" alt="Заглушка-стопкадр из видео">
         </a>
@@ -150,5 +167,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
