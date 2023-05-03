@@ -8,16 +8,15 @@
   </head>
   <body class="main-body">
     <header class="main-header container">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo active-link" href="#">
         <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <!-- Класс main-nav--nojs стоит при отключенном js -->
+      <!-- Класс main-nav--hidden используется для скрытия навигации при активном js -->
+      <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link--active active-link" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
@@ -29,6 +28,9 @@
             <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
           </li>
         </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </nav>
     </header>
     <main class="main-container container">
@@ -49,18 +51,19 @@
               <p class="advantages__text text">Седона не аттракцион для туристов, там&nbsp;течет своя жизнь</p>
             </div>
             <img class="advantages__img" src="img/real-city-mobile.png" width="320" height="260" alt="Фото настоящего городка.">
-            <ul class="advantages-real-life__list">
-              <li class="advantages-real-life__item advantages-real-life__item--accommodation">
-                <h4 class="advantages-real-life__title title">Жилье</h4>
-                <p class="advantages-real-life__text text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            <ul class="advantages__real-life-list">
+              <li class="advantages__real-life-item advantages__real-life-item--accommodation">
+                <h4 class="advantages__real-life-title title">Жилье</h4>
+                <p class="advantages__real-life-text text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
-              <li class="advantages-real-life__item advantages-real-life__item--food">
-                <h4 class="advantages-real-life__title title">Еда</h4>
-                <p class="advantages-real-life__text text">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+              <li class="advantages__real-life-item advantages__real-life-item--food">
+                <h4 class="advantages__real-life-title title">Еда</h4>
+                <p class="advantages__real-life-text text">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
               </li>
-              <li class="advantages-real-life__item advantages-real-life__item--souvenir">
-                <h4 class="advantages-real-life__title title">Сувениры</h4>
-                <p class="advantages-real-life__text text">Не только китайского, но&nbsp;и местного производства!</p>
+              <li class="advantages__real-life-item advantages__real-life-item--souvenir">
+                <h4 class="advantages__real-life-title title">Сувениры</h4>
+                <p class="advantages__real-life-text text">Не только китайского,<br>
+                  но&nbsp;и местного производства!</p>
               </li>
             </ul>
           </li>
@@ -80,7 +83,8 @@
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title title">Красивая дорога</h3>
             <p class="advantages__number text ">— №4 —</p>
-            <p class="advantages__text text">Ехать в седону из лас-вегаса совсем не&nbsp;скучно!</p>
+            <p class="advantages__text text">Ехать в седону из лас-<br>вегаса совсем<br>
+              не&nbsp;скучно!</p>
           </li>
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title title">Мало туристов</h3>
@@ -118,12 +122,13 @@
         </li>
       </ul>
       <div class="main-footer__copyright">
-        <span class="copyright__text text">Разработано</span>
         <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text text">Разработано</span>
           <svg class="copyright__icon" width="29" height="35" viewBox="0 0 29 35" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"/></svg>
           <span class="visually-hidden">HTML Academy</span>
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

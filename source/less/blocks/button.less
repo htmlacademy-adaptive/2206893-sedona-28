@@ -9,4 +9,26 @@
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  .pointer();
+
+  &:hover {
+    background-color: @secondary-color-hover;
+  }
+
+  &:active {
+    background-color: @secondary-color-active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.2);
+    background-color: @secondary-color-active;
+    outline-offset: -4px;
+  }
+
+  &:disabled {
+    background-color: @input-hover-color;
+    color: @base-color;
+    pointer-events: none;
+  }
 }
