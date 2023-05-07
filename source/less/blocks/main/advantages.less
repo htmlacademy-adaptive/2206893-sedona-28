@@ -112,8 +112,17 @@
 }
 
 .advantages__img {
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: 517px) {
+    height: auto;
+  }
+
   @media (min-width: @tablet-width) {
-    grid-column: span 2;
+    &-wrapper {
+      grid-column: span 2;
+    }
   }
 }
 
@@ -152,43 +161,43 @@
     }
 
     &--accommodation {
-      background-image: url("../../img/accommodation-icon.svg");
+      background-image: url("../../img/advantages/accommodation-icon.svg");
 
       @media (min-width: @tablet-width) {
-        background-image: url("../../img/accommodation-icon-tablet.svg");
+        background-image: url("../../img/advantages/accommodation-icon-tablet.svg");
         background-position: center 60px;
       }
 
       @media (min-width: @desktop-width) {
-        background-image: url("../../img/accommodation-icon-desktop.svg");
+        background-image: url("../../img/advantages/accommodation-icon-desktop.svg");
         background-position: center 69px;
       }
     }
 
     &--food {
-      background-image: url("../../img/food-icon.svg");
+      background-image: url("../../img/advantages/food-icon.svg");
 
       @media (min-width: @tablet-width) {
-        background-image: url("../../img/food-icon-tablet.svg");
+        background-image: url("../../img/advantages/food-icon-tablet.svg");
         background-position: center 62px;
       }
 
       @media (min-width: @desktop-width) {
-        background-image: url("../../img/food-icon-desktop.svg");
+        background-image: url("../../img/advantages/food-icon-desktop.svg");
         background-position: center 72px;
       }
     }
 
     &--souvenir {
-      background-image: url("../../img/souvenir-icon.svg");
+      background-image: url("../../img/advantages/souvenir-icon.svg");
 
       @media (min-width: @tablet-width) {
-        background-image: url("../../img/souvenir-icon-tablet.svg");
+        background-image: url("../../img/advantages/souvenir-icon-tablet.svg");
         background-position: center 64px;
       }
 
       @media (min-width: @desktop-width) {
-        background-image: url("../../img/souvenir-icon-desktop.svg");
+        background-image: url("../../img/advantages/souvenir-icon-desktop.svg");
         background-position: center 69px;
       }
     }
@@ -222,7 +231,7 @@
       left: 0;
       width: 100%;
       height: 38px;
-      background-image: url("../../img/real-city-white-cover-mobile.svg");
+      background-image: url("../../img/advantages/real-city-white-cover-mobile.svg");
       background-repeat: no-repeat;
       background-position: center;
     }

@@ -3,16 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - каталог фото и видео</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"><!-- 16×16 -->
+    <link rel="icon" href="favicon-32.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="main-body">
     <header class="main-header container">
       <a class="main-header__logo" href="index.html">
         <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
-      <!-- Класс main-nav--nojs стоит при отключенном js -->
-      <!-- Класс main-nav--hidden используется для скрытия навигации при активном js -->
+      <!-- Класс main-nav--nojs стоит при отключенном js и при включении js он автоматически удаляется, а класс main-nav--hidden используется для скрытия навигации при активном js -->
       <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -53,8 +57,11 @@
         </header>
         <ul class="foto-catalog__list">
           <li class="foto-catalog__item foto-catalog__item--main">
-            <a class="foto-catalog__link" href="#" aria-label="Открыть полноразмерное фото">
-              <img src="img/non-native-spaces-mobile.png" width="280" height="280" alt="Фото Неродные просторы.">
+            <a class="foto-catalog__link foto-catalog__link--main" href="#" aria-label="Открыть полноразмерное фото">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/non-native-spaces-full@1x.png 1x, img/catalog/non-native-spaces-full@2x.png 2x">
+                <img src="img/catalog/non-native-spaces-mobile@1x.png" width="320" height="280" alt="Фото Неродные просторы." srcset="img/catalog/non-native-spaces-mobile@2x.png 2x">
+              </picture>
             </a>
             <div class="foto-catalog__description">
               <h3 class="foto-catalog__title text">Неродные просторы</h3>
@@ -72,7 +79,10 @@
           </li>
           <li class="foto-catalog__item">
             <a class="foto-catalog__link" href="#" aria-label="Открыть полноразмерное фото">
-              <img src="img/plants-mobile.png" width="280" height="280" alt="Фото Местная растительность.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/plants-full@1x.png 1x, img/catalog/plants-full@2x.png 2x">
+                <img src="img/catalog/plants-mobile@1x.png" width="320" height="280" alt="Фото Местная растительность." srcset="img/catalog/plants-mobile@2x.png 2x">
+              </picture>
             </a>
             <div class="foto-catalog__description">
               <h3 class="foto-catalog__title text">Местная растительность</h3>
@@ -90,7 +100,10 @@
           </li>
           <li class="foto-catalog__item">
             <a class="foto-catalog__link" href="#" aria-label="Открыть полноразмерное фото">
-              <img src="img/road-to-nord-mobile.png" width="280" height="280" alt="Фото Дорога на север.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/road-to-nord-full@1x.png 1x, img/catalog/road-to-nord-full@2x.png 2x">
+                <img src="img/catalog/road-to-nord-mobile@1x.png" width="320" height="280" alt="Фото Дорога на север." srcset="img/catalog/road-to-nord-mobile@2x.png 2x">
+              </picture>
             </a>
             <div class="foto-catalog__description">
               <h3 class="foto-catalog__title text">Дорога на север</h3>
@@ -108,7 +121,10 @@
           </li>
           <li class="foto-catalog__item">
             <a class="foto-catalog__link" href="#" aria-label="Открыть полноразмерное фото">
-              <img src="img/devil-bridge-catalog-mobile.png" width="280" height="280" alt="Фото Мост дьявола.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog/devil-bridge-catalog-full@1x.png 1x, img/catalog/devil-bridge-catalog-full@2x.png 2x">
+                <img src="img/catalog/devil-bridge-catalog-mobile@1x.png" width="320" height="280" alt="Фото Мост дьявола." srcset="img/catalog/devil-bridge-catalog-mobile@2x.png 2x">
+              </picture>
             </a>
             <div class="foto-catalog__description">
               <h3 class="foto-catalog__title text">Мост дьявола</h3>
@@ -130,13 +146,17 @@
         <h2 class="video__title title title--increased">Все еще сомневаетесь?</h2>
         <p class="video__text text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <a class="video__link" target="_blank" href="#">
-          <button class="video__play-button" type="button">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.png 1x, img/catalog/video-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.png 1x, img/catalog/video-tablet@2x.png 2x">
+            <img src="img/catalog/video-mobile@1x.png" width="280" height="177" alt="Заглушка-стопкадр из видео" srcset="img/catalog/video-mobile@2x.png 2x">
+          </picture>
+          <span class="video__play-button">
             <span class="visually-hidden">Посмотреть видео</span>
             <svg width="48" height="54" viewBox="0 0 48 54" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
               <path d="M48 27L0 54L2.42273e-06 0L48 27Z"/>
             </svg>
-          </button>
-          <img src="img/video-mobile.png" width="280" height="177" alt="Заглушка-стопкадр из видео">
+          </span>
         </a>
       </section>
     </main>

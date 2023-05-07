@@ -3,17 +3,28 @@
 
 .main-container__header {
   position: relative;
-  background-image: url("../../img/intro-triangle.svg"), url("../../img/intro-back-mobile@1x.png");
+  background-image: url("../../img/background/intro-triangle.svg"), url("../../img/background/intro-mobile@1x.png");
   background-repeat: no-repeat;
   background-color: @secondary-color;
-  background-position: center bottom, center top;
+  background-position: center bottom;
+  background-size: auto, cover;
   text-align: center;
   line-height: 0;
   height: 389px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background/intro-triangle.svg"), url("../img/background/intro-mobile@2x.png");
+    background-size: auto, 768px auto;
+  }
+
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/intro-triangle.svg"), url("../../img/intro-back-desktop@1x.png");
+    background-image: url("../../img/background/intro-triangle.svg"), url("../../img/background/intro-desktop@1x.png");
     height: 518px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/intro-triangle.svg"), url("../img/background/intro-desktop@2x.png");
+      background-size: auto, 1200px auto;
+    }
   }
 
   img {
@@ -21,22 +32,31 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 77px;
+      width: 461px;
+      height: auto;
     }
   }
 
   &--secondary {
-    background-image: url("../../img/intro-triangle.svg"), url("../../img/intro-background-mobile-secondary.png");
-    background-position: center bottom, center -56px;
+    background-image: url("../../img/background/intro-triangle.svg"), url("../../img/background/intro-mobile-secondary@1x.png");
     height: 158px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/intro-triangle.svg"), url("../img/background/intro-mobile-secondary@2x.png");
+      background-size: auto, 768px auto;
+    }
+
     @media (min-width: @tablet-width) {
-      background-image: url("../../img/intro-triangle.svg"), url("../../img/intro-back-desktop@1x.png");
-      background-position: center bottom, center -217px;
+      background-image: url("../../img/background/intro-triangle.svg"), url("../../img/background/intro-desktop@1x.png");
       height: 290px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/intro-triangle.svg"), url("../img/background/intro-desktop@2x.png");
+        background-size: auto, 1200px auto;
+      }
     }
 
     @media (min-width: @desktop-width) {
-      background-position: center bottom, center -206px;
       height: 301px;
     }
 
@@ -45,10 +65,12 @@
 
       @media (min-width: @tablet-width) {
         margin-top: 95px;
+        width: 457px;
       }
 
       @media (min-width: @desktop-width) {
         margin-top: 101px;
+        width: 460px;
       }
     }
   }

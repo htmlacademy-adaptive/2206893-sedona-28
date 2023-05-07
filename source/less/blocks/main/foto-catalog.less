@@ -7,6 +7,10 @@
 
   @media (min-width: @desktop-width) {
     padding: 100px 0 0 0;
+
+    &__description {
+      margin-top: auto;
+    }
   }
 
   &__header {
@@ -69,8 +73,11 @@
     }
 
     @media (min-width: @desktop-width) {
+      min-height: 267px;
+
       &--main {
         grid-column: span 3;
+        min-height: 400px;
       }
     }
 
@@ -87,12 +94,33 @@
     display: inline-flex;
     margin-bottom: 15px;
 
+    img {
+      object-fit: cover;
+      max-width: 419px;
+      height: auto;
+    }
+
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
+
+      img {
+        min-height: 267px;
+        max-width: 400px;
+      }
+
+      &--main img {
+        min-height: 400px;
+      }
+    }
+
+    &--main img {
+      max-width: 100%;
     }
 
     @media (min-width: @desktop-width) {
-      margin-bottom: -80px;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -112,6 +140,7 @@
 
     @media (min-width: @desktop-width) {
       background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
     }
   }
 
@@ -209,34 +238,6 @@
     @media (min-width: @desktop-width) {
       color: @base-color;
       opacity: 1;
-
-      &:hover {
-        color: @active-color;
-      }
-
-      &:hover + .foto-catalog__like-counter {
-        color: @active-color;
-      }
-
-      &:active {
-        color: @active-color;
-      }
-
-      &:active + .foto-catalog__like-counter {
-        color: @active-color;
-      }
-
-      &:focus-visible {
-        color: @active-color;
-      }
-
-      &:focus-visible svg {
-        outline: 2px solid @active-color;
-      }
-
-      &:focus-visible + .foto-catalog__like-counter {
-        color: @active-color;
-      }
     }
   }
 }
