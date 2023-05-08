@@ -6,10 +6,12 @@ const initOpenMenu = () => {
   navMain.classList.add('main-nav--hidden');
 
   navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--hidden')) {
-      navMain.classList.toggle('main-nav--hidden');
-    }
+    navMain.classList.toggle('main-nav--hidden');
   });
+};
+
+const initMap = () => {
+  document.querySelector('.google-map').style.display = "block";
 };
 
 const initModalOk = () => {
@@ -83,5 +85,6 @@ const initModalOk = () => {
 // };
 
 initOpenMenu();
+initMap();
 initModalOk();
 // initModalError();

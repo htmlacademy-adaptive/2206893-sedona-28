@@ -10,5 +10,20 @@
     height: 96px;
     transform: translateX(-50%);
     z-index: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+
+    &:focus-visible {
+      outline: none;
+      opacity: 0.8;
+      box-shadow: 0 0 2px 3px @input-color,
+        0 0 3px 6px rgba(129, 179, 210, 0.4);
+    }
   }
 }

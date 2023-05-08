@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - главная страницы</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="main-body">
     <header class="main-header container">
       <a class="main-header__logo active-link" href="#">
         <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
-      <!-- Класс main-nav--nojs стоит при отключенном js -->
-      <!-- Класс main-nav--hidden используется для скрытия навигации при активном js -->
+      <!-- Класс main-nav--nojs стоит при отключенном js и при включении js он автоматически удаляется, а класс main-nav--hidden используется для скрытия навигации при активном js -->
       <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -50,7 +53,13 @@
               <p class="advantages__number text">— №1 —</p>
               <p class="advantages__text text">Седона не аттракцион для туристов, там&nbsp;течет своя жизнь</p>
             </div>
-            <img class="advantages__img" src="img/real-city-mobile.png" width="320" height="260" alt="Фото настоящего городка.">
+            <div class="advantages__img-wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/advantages/real-city-desktop@1x.png 1x, img/advantages/real-city-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/advantages/real-city-tab@1x.png 1x, img/advantages/real-city-tab@2x.png 2x">
+                <img class="advantages__img" src="img/advantages/real-city-mobile@1x.png" width="320" height="260" alt="Фото настоящего городка." srcset="img/advantages/real-city-mobile@2x.png 2x">
+              </picture>
+            </div>
             <ul class="advantages__real-life-list">
               <li class="advantages__real-life-item advantages__real-life-item--accommodation">
                 <h4 class="advantages__real-life-title title">Жилье</h4>
@@ -73,7 +82,13 @@
               <p class="advantages__number text">— №2 —</p>
               <p class="advantages__text text">Да, по нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages__img" src="img/devil-bridge-mobile.png" width="320" height="260" alt="Фото моста дьявола.">
+            <div class="advantages__img-wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/advantages/devil-bridge-desktop@1x.png 1x, img/advantages/devil-bridge-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/advantages/devil-bridge-tab@1x.png 1x, img/advantages/devil-bridge-tab@2x.png 2x">
+                <img class="advantages__img" src="img/advantages/devil-bridge-mobile@1x.png" width="320" height="260" alt="Фото моста дьявола." srcset="img/advantages/devil-bridge-mobile@2x.png 2x">
+              </picture>
+            </div>
           </li>
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title title">Небольшая площадь</h3>
@@ -99,7 +114,13 @@
           <p class="searching__text text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения&nbsp;гостиниц&nbsp;Седоны</p>
           <a class="searching__link button" href="#">Найти гостиницу</a>
         </div>
-        <img class="searching__map" src="img/map-mobile.png" width="320" height="350" alt="Седона на карте">
+        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8356051389692!2d30.317491999999998!3d59.9680504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2sru!4v1639009892658!5m2!1sen!2sru" width="320" height="350" allowfullscreen title="Вместо Седоны"></iframe>
+        <noscript>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+            <img class="searching__map" src="img/map-tablet@1x.png" width="320" height="350" alt="Седона на карте" srcset="img/map-tablet@2x.png 2x">
+          </picture>
+        </noscript>
       </section>
     </main>
     <footer class="main-footer container">
