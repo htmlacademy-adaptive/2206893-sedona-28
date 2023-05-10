@@ -11,7 +11,13 @@ const initOpenMenu = () => {
 };
 
 const initMap = () => {
-  document.querySelector('.google-map').style.display = "block";
+  const mapFrame = document.querySelector('.google-map');
+
+  if (!mapFrame) {
+    return;
+  }
+
+  mapFrame.style.display = "block";
 };
 
 const initModalOk = () => {

@@ -4,7 +4,7 @@
   padding: 17px @secondary-side-indent 0 @secondary-side-indent;
   text-align: center;
 
-  @media (max-width: @mobile-width) {
+  @media (max-width: (@tablet-width - 0.02)) {
     &::before {
       content: "";
       position: absolute;
@@ -107,6 +107,6 @@
     transform: translate(-50%, -50%);
     background-image: url("../../img/play-button.svg");
     background-color: rgba(252, 252, 252, 0);
-    // z-index: 1;
+    z-index: 1;
   }
 }
