@@ -82,7 +82,7 @@
     }
 
     &:nth-child(odd) {
-      @media (min-width: @tablet-width) and (max-width: 1199px) {
+      @media (min-width: @tablet-width) and (max-width: (@desktop-width - 0.02)) {
         .foto-catalog__description {
           background-color: #eaeaea;
         }
@@ -175,6 +175,7 @@
   }
 
   &__like-wrapper {
+    position: relative;
     .flex-style(initial, initial, initial, flex-end);
 
     @media (min-width: @tablet-width) {
@@ -193,17 +194,18 @@
   }
 
   &__button {
-    padding: 0 14px 5px 0;
     border: none;
-    line-height: 0;
-    color: @base-text-color;
     opacity: 0.3;
-    background-color: rgba(252, 252, 252, 0);
-    background-repeat: no-repeat;
+    width: 37px;
+    height: 26px;
+    mask-image: url("../../img/sprite-stack.svg#like-icon");
+    background-color: @base-text-color;
+    mask-size: 23px 21px;
+    mask-repeat: no-repeat;
     .pointer();
 
     &:hover {
-      color: @secondary-color;
+      background-color: @secondary-color;
       opacity: 1;
     }
 
@@ -213,7 +215,7 @@
     }
 
     &:active {
-      color: @secondary-color;
+      background-color: @secondary-color;
       opacity: 0.6;
     }
 
@@ -224,26 +226,32 @@
 
     &:focus-visible {
       outline: none;
-      color: @secondary-color;
+      background-color: @secondary-color;
       opacity: 1;
-    }
-
-    &:focus-visible svg {
-      outline: 2px solid @secondary-color;
-      border-radius: 20%;
-      outline-offset: 3px;
     }
 
     &:focus-visible + .foto-catalog__like-counter {
       color: @secondary-color;
     }
 
+    &:focus-visible + .foto-catalog__like-counter::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 29px;
+      height: 27px;
+      outline: 2px solid @secondary-color;
+      border-radius: 20%;
+    }
+
     @media (min-width: @tablet-width) {
-      padding: 0 14px 4px 0;
+      width: 37px;
+      height: 25px;
     }
 
     @media (min-width: @desktop-width) {
-      color: @base-color;
+      background-color: @base-color;
       opacity: 1;
     }
   }

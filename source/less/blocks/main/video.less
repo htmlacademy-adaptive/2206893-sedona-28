@@ -65,7 +65,7 @@
     }
 
     &:hover .video__play-button {
-      color: @secondary-color;
+      background-color: @secondary-color;
       opacity: 0.8;
     }
 
@@ -74,7 +74,7 @@
     }
 
     &:active .video__play-button {
-      color: @active-color;
+      background-color: @active-color;
       opacity: 0.7;
     }
 
@@ -89,7 +89,7 @@
     }
 
     &:focus-visible .video__play-button {
-      color: @secondary-color;
+      background-color: @secondary-color;
       opacity: 0.8;
     }
   }
@@ -102,11 +102,10 @@
     left: 50%;
     width: 48px;
     height: 54px;
-    color: @base-color;
     opacity: 0.7;
     transform: translate(-50%, -50%);
-    background-image: url("../../img/play-button.svg");
-    background-color: rgba(252, 252, 252, 0);
+    mask-image: url("../../img/sprite-stack.svg#play-video-icon");
+    background-color: @base-color;
     z-index: 1;
   }
 }

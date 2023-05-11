@@ -104,9 +104,10 @@
 .advantages__text {
   color: @base-color;
 
-  @media (max-width: (@tablet-width - 0.02)) or (min-width: @desktop-width) {
-    br {
-      display: none;
+  @media (min-width: @tablet-width) and (max-width: (@desktop-width - 0.02)) {
+    span::after {
+      content: "\A";
+      white-space: pre;
     }
   }
 }
@@ -216,9 +217,10 @@
       padding: 0 20px;
     }
 
-    @media (max-width: (@desktop-width - 0.02)) {
-      br {
-        display: none;
+    @media (min-width: @desktop-width) {
+      span::after {
+        content: "\A";
+        white-space: pre;
       }
     }
   }
