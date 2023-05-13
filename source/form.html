@@ -12,7 +12,7 @@
   </head>
   <body class="main-body">
     <header class="main-header container">
-      <a class="main-header__logo" href="index.html">
+      <a class="main-header__logo" href="index.html" aria-label="Перейти на главную страницу">
         <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
       <!-- Класс main-nav--nojs стоит при отключенном js и при включении js он автоматически удаляется, а класс main-nav--hidden используется для скрытия навигации при активном js -->
@@ -25,7 +25,7 @@
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active active-link" href="#">Форма Отзыва</a>
+            <a class="main-nav__link main-nav__link--active" href="#">Форма Отзыва</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
@@ -116,7 +116,7 @@
             </ul>
           </fieldset>
           <fieldset class="review-section review-section--filter-group">
-            <legend class="review-section__title title">Посещенные<br>достопримечательности:</legend>
+            <legend class="review-section__title title">Посещенные достопримечательности:</legend>
             <ul class="review-section__list review-section__list--attraction">
               <li class="review-section__item">
                 <label class="review-section___control">
@@ -179,10 +179,11 @@
         </li>
       </ul>
       <div class="main-footer__copyright">
-        <span class="copyright__text text">Разработано</span>
-        <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__icon" width="29" height="35" viewBox="0 0 29 35" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"/></svg>
-          <span class="visually-hidden">HTML Academy</span>
+        <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
+          <span class="copyright__text text">Разработано</span>
+          <svg class="copyright__icon" width="29" height="35" aria-label="HTML Academy">
+            <use xlink:href="img/sprite.svg#html-academy-icon"></use>
+          </svg>
         </a>
       </div>
     </footer>

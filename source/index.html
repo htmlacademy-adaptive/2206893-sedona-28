@@ -19,7 +19,7 @@
       <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active active-link" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
@@ -71,7 +71,7 @@
               </li>
               <li class="advantages__real-life-item advantages__real-life-item--souvenir">
                 <h4 class="advantages__real-life-title title">Сувениры</h4>
-                <p class="advantages__real-life-text text">Не только китайского,<br>
+                <p class="advantages__real-life-text text">Не только китайского,<span></span>
                   но&nbsp;и местного производства!</p>
               </li>
             </ul>
@@ -98,7 +98,7 @@
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title title">Красивая дорога</h3>
             <p class="advantages__number text ">— №4 —</p>
-            <p class="advantages__text text">Ехать в седону из лас-<br>вегаса совсем<br>
+            <p class="advantages__text text">Ехать в седону из лас-<span></span>вегаса совсем<span></span>
               не&nbsp;скучно!</p>
           </li>
           <li class="advantages__item advantages__item--secondary">
@@ -143,10 +143,11 @@
         </li>
       </ul>
       <div class="main-footer__copyright">
-        <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
           <span class="copyright__text text">Разработано</span>
-          <svg class="copyright__icon" width="29" height="35" viewBox="0 0 29 35" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"/></svg>
-          <span class="visually-hidden">HTML Academy</span>
+          <svg class="copyright__icon" width="29" height="35" aria-label="HTML Academy">
+            <use xlink:href="img/sprite.svg#html-academy-icon"></use>
+          </svg>
         </a>
       </div>
     </footer>
