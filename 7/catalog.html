@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона - каталог фото и видео</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <base href="https://htmlacademy-adaptive.github.io/2206893-sedona-28/7/">
+</head>
+  <body class="main-body">
+    <header class="main-header container">
+      <a class="main-header__logo" href="index.html" aria-label="Перейти на главную страницу">
+        <img src="img/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
+      </a>
+      <!-- Класс main-nav--nojs стоит при отключенном js и при включении js он автоматически удаляется, а класс main-nav--hidden используется для скрытия навигации при активном js -->
+      <nav class="main-nav main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active" href="#">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма Отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
+          </li>
+        </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </nav>
+    </header>
+    <main class="main-container container">
+      <header class="main-container__header main-container__header--secondary">
+        <h1 class="visually-hidden">Каталог фото и видео из Седоны!</h1>
+        <img src="img/sedona-text.svg" width="229" height="39" alt="Великолепная Седона лучше Гранд Каньона">
+      </header>
+      <section class="foto-catalog">
+        <header class="foto-catalog__header">
+          <h2 class="foto-catalog__header-title title">Фото и видео</h2>
+          <p class="foto-catalog__header-text text">Не можете решиться на путешествие из-за курса? Фотографии&nbsp;помогут вам забыть о политике и экономике.</p>
+        </header>
+        <ul class="foto-catalog__list">
+          <li class="foto-catalog__item foto-catalog__item--main">
+            <a class="foto-catalog__link foto-catalog__link--main" href="#" aria-label="Открыть полноразмерное фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/non-native-spaces-full@1x.webp 1x, img/catalog/non-native-spaces-full@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/non-native-spaces-mobile@1x.webp 1x, img/catalog/non-native-spaces-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/non-native-spaces-full@1x.png 1x, img/catalog/non-native-spaces-full@2x.png 2x">
+                <img src="img/catalog/non-native-spaces-mobile@1x.png" width="320" height="280" alt="Фото Неродные просторы." srcset="img/catalog/non-native-spaces-mobile@2x.png 2x">
+              </picture>
+            </a>
+            <div class="foto-catalog__description">
+              <h3 class="foto-catalog__title text">Неродные просторы</h3>
+              <p class="foto-catalog__autor text">Автор фото: Борис</p>
+              <div class="foto-catalog__like-wrapper">
+                <button class="foto-catalog__button" type="button">
+                  <span class="visually-hidden">Поставить лайк.</span>
+                </button>
+                <span class="foto-catalog__like-counter text">1350</span>
+              </div>
+            </div>
+          </li>
+          <li class="foto-catalog__item">
+            <a class="foto-catalog__link" href="#" aria-label="Открыть полноразмерное фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/plants-full@1x.webp 1x, img/catalog/plants-full@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/plants-mobile@1x.webp 1x, img/catalog/plants-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/plants-full@1x.png 1x, img/catalog/plants-full@2x.png 2x">
+                <img src="img/catalog/plants-mobile@1x.png" width="320" height="280" alt="Фото Местная растительность." srcset="img/catalog/plants-mobile@2x.png 2x">
+              </picture>
+            </a>
+            <div class="foto-catalog__description">
+              <h3 class="foto-catalog__title text">Местная растительность</h3>
+              <p class="foto-catalog__autor text">Автор фото: Сергей</p>
+              <div class="foto-catalog__like-wrapper">
+                <button class="foto-catalog__button" type="button">
+                  <span class="visually-hidden">Поставить лайк.</span>
+                </button>
+                <span class="foto-catalog__like-counter text">143</span>
+              </div>
+            </div>
+          </li>
+          <li class="foto-catalog__item">
+            <a class="foto-catalog__link" href="#" aria-label="Открыть полноразмерное фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/road-to-nord-full@1x.webp 1x, img/catalog/road-to-nord-full@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/road-to-nord-mobile@1x.webp 1x, img/catalog/road-to-nord-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/road-to-nord-full@1x.png 1x, img/catalog/road-to-nord-full@2x.png 2x">
+                <img src="img/catalog/road-to-nord-mobile@1x.png" width="320" height="280" alt="Фото Дорога на север." srcset="img/catalog/road-to-nord-mobile@2x.png 2x">
+              </picture>
+            </a>
+            <div class="foto-catalog__description">
+              <h3 class="foto-catalog__title text">Дорога на север</h3>
+              <p class="foto-catalog__autor text">Автор фото: Петр</p>
+              <div class="foto-catalog__like-wrapper">
+                <button class="foto-catalog__button" type="button">
+                  <span class="visually-hidden">Поставить лайк.</span>
+                </button>
+                <span class="foto-catalog__like-counter text">96</span>
+              </div>
+            </div>
+          </li>
+          <li class="foto-catalog__item">
+            <a class="foto-catalog__link" href="#" aria-label="Открыть полноразмерное фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/devil-bridge-catalog-full@1x.webp 1x, img/catalog/devil-bridge-catalog-full@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/devil-bridge-catalog-mobile@1x.webp 1x, img/catalog/devil-bridge-catalog-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/devil-bridge-catalog-full@1x.png 1x, img/catalog/devil-bridge-catalog-full@2x.png 2x">
+                <img src="img/catalog/devil-bridge-catalog-mobile@1x.png" width="320" height="280" alt="Фото Мост дьявола." srcset="img/catalog/devil-bridge-catalog-mobile@2x.png 2x">
+              </picture>
+            </a>
+            <div class="foto-catalog__description">
+              <h3 class="foto-catalog__title text">Мост дьявола</h3>
+              <p class="foto-catalog__autor text">Автор фото: Антон</p>
+              <div class="foto-catalog__like-wrapper">
+                <button class="foto-catalog__button" type="button">
+                  <span class="visually-hidden">Поставить лайк.</span>
+                </button>
+                <span class="foto-catalog__like-counter text">254</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="video">
+        <h2 class="video__title title title--increased">Все еще сомневаетесь?</h2>
+        <p class="video__text text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <a class="video__link" target="_blank" href="#" aria-label="Перейти к просмотру видео">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.webp 1x, img/catalog/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.webp 1x, img/catalog/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/video-mobile@1x.webp 1x, img/catalog/video-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.png 1x, img/catalog/video-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.png 1x, img/catalog/video-tablet@2x.png 2x">
+            <img src="img/catalog/video-mobile@1x.png" width="280" height="177" alt="Заглушка-стопкадр из видео" srcset="img/catalog/video-mobile@2x.png 2x">
+          </picture>
+          <span class="video__play-button"></span>
+        </a>
+      </section>
+    </main>
+    <footer class="main-footer container">
+      <h2 class="footer__title title title--increased">#Visitsedona</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" target="_blank" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы во ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" target="_blank" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Telegram</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" target="_blank" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Youtube</span>
+          </a>
+        </li>
+      </ul>
+      <div class="main-footer__copyright">
+        <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
+          <span class="copyright__text text">Разработано</span>
+          <svg class="copyright__icon" width="29" height="35" aria-label="HTML Academy">
+            <use xlink:href="img/sprite.svg#html-academy-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
