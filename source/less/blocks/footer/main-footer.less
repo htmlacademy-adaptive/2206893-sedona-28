@@ -1,6 +1,6 @@
 .main-footer {
   .grid-style(30px, center);
-  padding: 41px @main-side-indent 33px @main-side-indent;
+  padding: 33px @main-side-indent;
   justify-content: center;
   text-align: center;
 
@@ -17,6 +17,16 @@
   &__copyright {
     .flex-style(initial, wrap, initial, center);
     justify-content: center;
+  }
+}
+
+.footer__title {
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 26px;
   }
 }
 
