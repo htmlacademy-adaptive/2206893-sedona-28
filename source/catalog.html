@@ -39,7 +39,10 @@
     <main class="main-container container">
       <header class="main-container__header main-container__header--secondary">
         <h1 class="visually-hidden">Каталог фото и видео из Седоны!</h1>
-        <img src="img/sedona-text.svg" width="229" height="39" alt="Великолепная Седона лучше Гранд Каньона">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/sedona-text-desktop.svg">
+          <img src="img/sedona-text.svg" width="229" height="39" alt="Великолепная Седона лучше Гранд Каньона">
+        </picture>
       </header>
       <section class="foto-catalog">
         <header class="foto-catalog__header">
