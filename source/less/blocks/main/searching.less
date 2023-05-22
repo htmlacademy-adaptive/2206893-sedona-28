@@ -1,7 +1,10 @@
 .searching {
   .indent-reset();
   .flex-style(column, initial, initial, center);
-  margin-bottom: 8px;
+
+  @media (max-width: (@tablet-width - 0.02)) {
+    margin-bottom: 8px;
+  }
 
   &__text-wrapper {
     padding: 38px @main-side-indent 49px @main-side-indent;
