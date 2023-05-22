@@ -90,23 +90,7 @@ const initModalOk = () => {
 //   });
 // };
 
-const addLike = () => {
-	const buttonLike = document.querySelector('.foto-catalog__button');
-	let likesNumber = document.querySelector('.foto-catalog__like-counter');
-
-	buttonLike.addEventListener('click', function () {
-		if (buttonLike.classList.contains('foto-catalog__button--added')) {
-			likesNumber.textContent++;
-		} else {
-      likesNumber.textContent--;
-		}
-
-		buttonLike.classList.toggle('foto-catalog__button--added');
-	});
-}
-
 initOpenMenu();
 initMap();
 initModalOk();
-addLike();
 // initModalError();
