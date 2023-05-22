@@ -135,6 +135,19 @@
     .flex-style(column, initial, initial, initial);
     margin-bottom: 15px;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      opacity: 0.8;
+      outline: none;
+    }
+
     img {
       object-fit: cover;
       width: 100%;
@@ -211,7 +224,7 @@
     opacity: 0.3;
     width: 37px;
     height: 26px;
-    mask-image: url("../../img/sprite-stack.svg#like-icon");
+    mask-image: url("../../img/sprite.svg#like-icon");
     background-color: @base-text-color;
     mask-size: 23px 21px;
     mask-repeat: no-repeat;
