@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона - страница для отзыва</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
@@ -39,14 +39,17 @@
     <main class="main-container container">
       <header class="main-container__header main-container__header--secondary">
         <h1 class="visually-hidden">Страница для отзыва о Седоне.</h1>
-        <img src="img/sedona-text.svg" width="229" height="39" alt="Великолепная Седона лучше Гранд Каньона">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/sedona-text-desktop.svg">
+          <img src="img/sedona-text.svg" width="229" height="39" alt="Великолепная Седона лучше Гранд Каньона.">
+        </picture>
       </header>
       <section class="review">
         <header class="review__header">
           <h2 class="review__header-title title">Оставьте свой отзыв</h2>
           <p class="review__header-text text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
         </header>
-        <form class="review__form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="review__form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="review-section review-section--representation">
             <h3 class="review-section__title title">Представьтесь:</h3>
             <ul class="review-section__list">
@@ -182,7 +185,7 @@
         <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
           <span class="copyright__text text">Разработано</span>
           <svg class="copyright__icon" width="29" height="35" aria-label="HTML Academy">
-            <use xlink:href="img/sprite.svg#html-academy-icon"></use>
+            <use xlink:href="img/svg/sprite.svg#html-academy-icon"></use>
           </svg>
         </a>
       </div>

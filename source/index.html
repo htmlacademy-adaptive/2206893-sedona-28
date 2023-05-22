@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона - главная страницы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
@@ -39,7 +39,7 @@
     <main class="main-container container">
       <header class="main-container__header">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
-        <img src="img/slogan-intro.svg" width="282" height="214" alt="Великолепная Седона лучше Гранд Каньона">
+        <img src="img/slogan-intro.svg" width="282" height="214" alt="Великолепная Седона лучше Гранд Каньона.">
       </header>
       <section class="advantages">
         <header class="advantages__header">
@@ -71,14 +71,14 @@
               </li>
               <li class="advantages__real-life-item advantages__real-life-item--souvenir">
                 <h4 class="advantages__real-life-title title">Сувениры</h4>
-                <p class="advantages__real-life-text text">Не только китайского,<span></span>
+                <p class="advantages__real-life-text text">Не только китайского,<span class="desktop-br"></span>
                   но&nbsp;и местного производства!</p>
               </li>
             </ul>
           </li>
           <li class="advantages__item">
             <div class="advantages__devil-bridge">
-              <h3 class="advantages__title title">Там есть мост дьявола</h3>
+              <h3 class="advantages__title title">Там есть мост&nbsp;дьявола</h3>
               <p class="advantages__number text">— №2 —</p>
               <p class="advantages__text text">Да, по нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
             </div>
@@ -93,32 +93,35 @@
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title title">Небольшая площадь</h3>
             <p class="advantages__number text ">— №3 —</p>
-            <p class="advantages__text text">Все интересные места находятся очень близко</p>
+            <p class="advantages__text text">Все интересные места находятся<span class="mobile-br"></span>
+              очень близко</p>
           </li>
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title title">Красивая дорога</h3>
             <p class="advantages__number text ">— №4 —</p>
-            <p class="advantages__text text">Ехать в седону из лас-<span></span>вегаса совсем<span></span>
+            <p class="advantages__text text">Ехать в седону из лас-<span class="tablet-br"></span>вегаса<span class="mobile-br"></span>
+              совсем<span class="tablet-br"></span>
               не&nbsp;скучно!</p>
           </li>
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title title">Мало туристов</h3>
             <p class="advantages__number text ">— №5 —</p>
-            <p class="advantages__text text">Большинство едет в гранд каньон и толпится там</p>
+            <p class="advantages__text text">Большинство едет в гранд каньон<span class="mobile-br"></span>
+              и толпится там</p>
           </li>
         </ul>
       </section>
       <section class="searching">
         <div class="searching__text-wrapper">
           <h2 class="searching__title title title--increased">Заинтересовались?</h2>
-          <p class="searching__text text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения&nbsp;гостиниц&nbsp;Седоны</p>
+          <p class="searching__text text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц&nbsp;в&nbsp;Cедоне</p>
           <a class="searching__link button" href="#">Найти гостиницу</a>
         </div>
         <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8356051389692!2d30.317491999999998!3d59.9680504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2sru!4v1639009892658!5m2!1sen!2sru" width="320" height="350" allowfullscreen title="Вместо Седоны"></iframe>
         <noscript>
           <picture>
             <source media="(min-width: 768px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
-            <img class="searching__map" src="img/map-tablet@1x.png" width="320" height="350" alt="Седона на карте" srcset="img/map-tablet@2x.png 2x">
+            <img class="searching__map" src="img/map-tablet@1x.png" width="320" height="350" alt="Седона на карте." srcset="img/map-tablet@2x.png 2x">
           </picture>
         </noscript>
       </section>
@@ -146,7 +149,7 @@
         <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
           <span class="copyright__text text">Разработано</span>
           <svg class="copyright__icon" width="29" height="35" aria-label="HTML Academy">
-            <use xlink:href="img/sprite.svg#html-academy-icon"></use>
+            <use xlink:href="img/svg/sprite.svg#html-academy-icon"></use>
           </svg>
         </a>
       </div>

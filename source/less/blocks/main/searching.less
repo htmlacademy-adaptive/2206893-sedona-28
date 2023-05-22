@@ -2,6 +2,10 @@
   .indent-reset();
   .flex-style(column, initial, initial, center);
 
+  @media (max-width: (@tablet-width - 0.02)) {
+    margin-bottom: 8px;
+  }
+
   &__text-wrapper {
     padding: 38px @main-side-indent 49px @main-side-indent;
     .flex-style(column, initial, initial, center);
@@ -17,10 +21,14 @@
   }
 
   &__title {
-    margin-bottom: 18px;
+    margin-bottom: 21px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 26px;
+      margin-bottom: 33px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 31px;
     }
   }
 

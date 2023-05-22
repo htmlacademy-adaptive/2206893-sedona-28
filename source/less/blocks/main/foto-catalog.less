@@ -1,12 +1,12 @@
 .foto-catalog {
-  padding: 37px @secondary-side-indent 0 @secondary-side-indent;
+  padding: 0 @secondary-side-indent;
 
   @media (min-width: @tablet-width) {
-    padding: 66px 60px 0 60px;
+    padding: 0 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 100px 0 0 0;
+    padding: 0;
 
     &__description {
       margin-top: auto;
@@ -14,13 +14,13 @@
   }
 
   &__header {
-    .flex-style(column, initial, 26px, center);
-    margin: 0 0 37px 0;
+    .flex-style(column, initial, 25px, center);
+    padding: 37px 0;
     text-align: center;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 80px;
-      padding: 0 105px;
+      padding: 66px 105px 80px 105px;
+      gap: 33px;
 
       &-title {
         font-size: 30px;
@@ -28,8 +28,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      margin-bottom: 86px;
-      padding: 0 370px 0 370px;
+      padding: 100px 370px 86px 370px;
     }
   }
 
@@ -47,6 +46,38 @@
     }
   }
 
+  &__description {
+    .grid-style(initial, center);
+    grid-template-columns: 1fr;
+
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
+      background-color: @input-color;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 22px 20px 15px 20px;
+      grid-template-columns: 1fr auto;
+      grid-auto-flow: dense;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 17px 20px 17px 25px;
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+
+    @media (min-width: @desktop-width) {
+      color: @base-color;
+      margin-bottom: 4px;
+    }
+  }
+
   &__item {
     .flex-style(column, initial, initial, initial);
     position: relative;
@@ -57,8 +88,9 @@
         content: "";
         position: absolute;
         top: 0;
-        left: -@secondary-side-indent;
-        width: calc(100% + 2 * @secondary-side-indent);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
         height: 1px;
         background-color: @input-hover-color;
       }
@@ -78,6 +110,14 @@
       &--main {
         grid-column: span 3;
         min-height: 400px;
+
+        .foto-catalog__description {
+          padding: 22px 20px 15px 20px;
+        }
+
+        .foto-catalog__title {
+          margin-bottom: 1px;
+        }
       }
     }
 
@@ -94,6 +134,19 @@
     // display: inline-flex;
     .flex-style(column, initial, initial, initial);
     margin-bottom: 15px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      opacity: 0.8;
+      outline: none;
+    }
 
     img {
       object-fit: cover;
@@ -116,7 +169,6 @@
       img {
         min-height: 267px;
         height: auto;
-        // max-width: 400px;
       }
 
       &--main img {
@@ -131,36 +183,9 @@
     }
   }
 
-  &__description {
-    .grid-style(initial, center);
-    grid-template-columns: 1fr;
-
-    @media (min-width: @tablet-width) and (max-width: 1199px) {
-      background-color: @input-color;
-    }
-
-    @media (min-width: @tablet-width) {
-      padding: 22px 20px 15px 20px;
-      grid-template-columns: 1fr auto;
-      grid-auto-flow: dense;
-    }
-
-    @media (min-width: @desktop-width) {
-      background-color: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-    }
-  }
-
-  &__title {
-    font-weight: 700;
-    text-transform: uppercase;
-
-    @media (min-width: @desktop-width) {
-      color: @base-color;
-    }
-  }
-
   &__autor {
+    text-transform: none;
+
     @media (max-width: (@tablet-width - 0.02)) {
       margin-bottom: 11px;
     }
@@ -194,11 +219,12 @@
   }
 
   &__button {
+    .indent-reset();
     border: none;
     opacity: 0.3;
     width: 37px;
     height: 26px;
-    mask-image: url("../../img/sprite-stack.svg#like-icon");
+    mask-image: url("../../img/svg/sprite.svg#like-icon");
     background-color: @base-text-color;
     mask-size: 23px 21px;
     mask-repeat: no-repeat;
@@ -246,7 +272,7 @@
     }
 
     @media (min-width: @tablet-width) {
-      width: 37px;
+      width: 32px;
       height: 25px;
     }
 
